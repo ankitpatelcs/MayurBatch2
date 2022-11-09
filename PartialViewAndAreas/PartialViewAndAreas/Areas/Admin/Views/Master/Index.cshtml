@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<a href="/Users/Manager/Index">Goto User Area</a>
+<br />
+@Html.ActionLink("Goto User Area", "Index", "Manager", new { @area = "Users" }, new { @class = "link" })

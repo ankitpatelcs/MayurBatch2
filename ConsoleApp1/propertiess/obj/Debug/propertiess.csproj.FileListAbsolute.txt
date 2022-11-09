@@ -1,0 +1,7 @@
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\propertiess\bin\Debug\propertiess.exe.config
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\propertiess\bin\Debug\propertiess.exe
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\propertiess\bin\Debug\propertiess.pdb
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\propertiess\obj\Debug\propertiess.csproj.AssemblyReference.cache
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\propertiess\obj\Debug\propertiess.csproj.CoreCompileInputs.cache
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\propertiess\obj\Debug\propertiess.exe
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\propertiess\obj\Debug\propertiess.pdb

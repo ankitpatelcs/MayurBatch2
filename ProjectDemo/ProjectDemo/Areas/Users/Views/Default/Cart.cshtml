@@ -1,0 +1,85 @@
+﻿@model IEnumerable<ProjectDemo.EDM.tblcart>
+
+@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Areas/Users/Views/Shared/Users_LayoutPage.cshtml";
+    double? CartTotal = 0;
+    double? Amount= 0;
+}
+<div class="products">
+    <div class="container">
+        <h2>Cart</h2>
+        <br />
+        <table class="table">
+            <tr>
+                <th>
+                    Product Image
+                </th>
+                <th>
+                    Product Name
+                </th>
+                <th>Product Cost</th>
+                <th>Discount</th>
+                <th>
+                    @Html.DisplayNameFor(model => model.qty)
+                </th>
+                <th>
+                    Amount
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <img src="~/Images/Products/@item.tblproduct.image1" width="50" height="50" />
+                    </td>
+                    <td>
+                        @item.tblproduct.product_name
+                    </td>
+                    <td>@item.tblproduct.cost</td>
+                    <td>@(item.tblproduct.cost * item.tblproduct.discount / 100)</td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.qty)
+                    </td>
+                    <td>
+                        @{
+                            Amount = (item.tblproduct.cost - (item.tblproduct.cost * item.tblproduct.discount / 100)) * item.qty;
+                            CartTotal += Amount;
+                        }
+                        @Amount
+                    </td>
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                </tr>
+            }
+        </table>
+        <br />
+        <div class="col-md-3">
+            <table class="table">
+                <tr>
+                    <th colspan="2">Cart Summary</th>
+                </tr>
+                <tr>
+                    <th>Cart Total</th>
+                    <td>@CartTotal</td>
+                </tr>
+                <tr>
+                    <th>GST @@18%</th>
+                    <td>@(CartTotal*18/100)</td>
+                </tr>
+                <tr>
+                    <th>Total Amount</th>
+                    <td>@(CartTotal+(CartTotal*18/100))</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <a href="/Users/Default/Checkout" class="btn btn-success">Checkout</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

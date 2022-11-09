@@ -1,0 +1,7 @@
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\Delegatess\bin\Debug\Delegatess.exe.config
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\Delegatess\bin\Debug\Delegatess.exe
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\Delegatess\bin\Debug\Delegatess.pdb
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\Delegatess\obj\Debug\Delegatess.csproj.AssemblyReference.cache
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\Delegatess\obj\Debug\Delegatess.csproj.CoreCompileInputs.cache
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\Delegatess\obj\Debug\Delegatess.exe
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\Delegatess\obj\Debug\Delegatess.pdb

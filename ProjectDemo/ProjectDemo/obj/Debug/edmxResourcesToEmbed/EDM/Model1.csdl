@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ecommerceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblAdmin">
+    <Key>
+      <PropertyRef Name="Admin_id" />
+    </Key>
+    <Property Name="Admin_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="f_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="l_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblcart">
+    <Key>
+      <PropertyRef Name="cart_id" />
+    </Key>
+    <Property Name="cart_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="product_id" Type="Int32" />
+    <Property Name="qty" Type="Int32" />
+    <Property Name="user_id" Type="Int32" />
+    <NavigationProperty Name="tblproduct" Relationship="Self.FK_tblcart_productid" FromRole="tblcart" ToRole="tblproduct" />
+    <NavigationProperty Name="tblUser" Relationship="Self.FK_tblcart_userid" FromRole="tblcart" ToRole="tblUser" />
+  </EntityType>
+  <EntityType Name="tblcity">
+    <Key>
+      <PropertyRef Name="city_id" />
+    </Key>
+    <Property Name="city_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="city_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="state_id" Type="Int32" />
+    <NavigationProperty Name="tblstate" Relationship="Self.FK__tblcity__state_i__3B75D760" FromRole="tblcity" ToRole="tblstate" />
+    <NavigationProperty Name="tblUsers" Relationship="Self.FK__tblUser__city_id__3F466844" FromRole="tblcity" ToRole="tblUser" />
+  </EntityType>
+  <EntityType Name="tblorder">
+    <Key>
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="order_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="orderdate" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="Byte" />
+    <Property Name="user_id" Type="Int32" />
+    <NavigationProperty Name="tblUser" Relationship="Self.FK_tblorder_user_id" FromRole="tblorder" ToRole="tblUser" />
+    <NavigationProperty Name="tblorderdetails" Relationship="Self.FK_tblorderdetails_order_id" FromRole="tblorder" ToRole="tblorderdetails" />
+  </EntityType>
+  <EntityType Name="tblorderdetail">
+    <Key>
+      <PropertyRef Name="orderdetails_id" />
+    </Key>
+    <Property Name="orderdetails_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="order_id" Type="Int32" />
+    <Property Name="product_id" Type="Int32" />
+    <Property Name="qty" Type="Int32" />
+    <NavigationProperty Name="tblorder" Relationship="Self.FK_tblorderdetails_order_id" FromRole="tblorderdetails" ToRole="tblorder" />
+    <NavigationProperty Name="tblproduct" Relationship="Self.FK_tblorderdetails_product_id" FromRole="tblorderdetails" ToRole="tblproduct" />
+  </EntityType>
+  <EntityType Name="tblproduct">
+    <Key>
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="product_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="product_name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="cost" Type="Double" />
+    <Property Name="qty" Type="Int32" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="image1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="image2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="image3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="discount" Type="Int32" />
+    <NavigationProperty Name="tblcarts" Relationship="Self.FK_tblcart_productid" FromRole="tblproduct" ToRole="tblcart" />
+    <NavigationProperty Name="tblorderdetails" Relationship="Self.FK_tblorderdetails_product_id" FromRole="tblproduct" ToRole="tblorderdetails" />
+  </EntityType>
+  <EntityType Name="tblstate">
+    <Key>
+      <PropertyRef Name="state_id" />
+    </Key>
+    <Property Name="state_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="state_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tblcities" Relationship="Self.FK__tblcity__state_i__3B75D760" FromRole="tblstate" ToRole="tblcity" />
+    <NavigationProperty Name="tblUsers" Relationship="Self.FK__tblUser__state_i__3E52440B" FromRole="tblstate" ToRole="tblUser" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="f_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="l_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="state_id" Type="Int32" />
+    <Property Name="city_id" Type="Int32" />
+    <Property Name="profile_img" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mobile" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dob" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tblcarts" Relationship="Self.FK_tblcart_userid" FromRole="tblUser" ToRole="tblcart" />
+    <NavigationProperty Name="tblcity" Relationship="Self.FK__tblUser__city_id__3F466844" FromRole="tblUser" ToRole="tblcity" />
+    <NavigationProperty Name="tblorders" Relationship="Self.FK_tblorder_user_id" FromRole="tblUser" ToRole="tblorder" />
+    <NavigationProperty Name="tblstate" Relationship="Self.FK__tblUser__state_i__3E52440B" FromRole="tblUser" ToRole="tblstate" />
+    <NavigationProperty Name="tblUser1" Relationship="Self.FK_tblUser_tblUser" FromRole="tblUser" ToRole="tblUser1" />
+    <NavigationProperty Name="tblUser2" Relationship="Self.FK_tblUser_tblUser" FromRole="tblUser1" ToRole="tblUser" />
+  </EntityType>
+  <Association Name="FK_tblcart_productid">
+    <End Role="tblproduct" Type="Self.tblproduct" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblcart" Type="Self.tblcart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblproduct">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="tblcart">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblcart_userid">
+    <End Role="tblUser" Type="Self.tblUser" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblcart" Type="Self.tblcart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUser">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="tblcart">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblcity__state_i__3B75D760">
+    <End Role="tblstate" Type="Self.tblstate" Multiplicity="0..1" />
+    <End Role="tblcity" Type="Self.tblcity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblstate">
+        <PropertyRef Name="state_id" />
+      </Principal>
+      <Dependent Role="tblcity">
+        <PropertyRef Name="state_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblUser__city_id__3F466844">
+    <End Role="tblcity" Type="Self.tblcity" Multiplicity="0..1" />
+    <End Role="tblUser" Type="Self.tblUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcity">
+        <PropertyRef Name="city_id" />
+      </Principal>
+      <Dependent Role="tblUser">
+        <PropertyRef Name="city_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblorder_user_id">
+    <End Role="tblUser" Type="Self.tblUser" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblorder" Type="Self.tblorder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblUser">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="tblorder">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblorderdetails_order_id">
+    <End Role="tblorder" Type="Self.tblorder" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblorderdetails" Type="Self.tblorderdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblorder">
+        <PropertyRef Name="order_id" />
+      </Principal>
+      <Dependent Role="tblorderdetails">
+        <PropertyRef Name="order_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblorderdetails_product_id">
+    <End Role="tblproduct" Type="Self.tblproduct" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tblorderdetails" Type="Self.tblorderdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblproduct">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="tblorderdetails">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblUser__state_i__3E52440B">
+    <End Role="tblstate" Type="Self.tblstate" Multiplicity="0..1" />
+    <End Role="tblUser" Type="Self.tblUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblstate">
+        <PropertyRef Name="state_id" />
+      </Principal>
+      <Dependent Role="tblUser">
+        <PropertyRef Name="state_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblUser_tblUser">
+    <End Role="tblUser" Type="Self.tblUser" Multiplicity="1" />
+    <End Role="tblUser1" Type="Self.tblUser" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblUser">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="tblUser1">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ecommerceEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblAdmins" EntityType="Self.tblAdmin" />
+    <EntitySet Name="tblcarts" EntityType="Self.tblcart" />
+    <EntitySet Name="tblcities" EntityType="Self.tblcity" />
+    <EntitySet Name="tblorders" EntityType="Self.tblorder" />
+    <EntitySet Name="tblorderdetails" EntityType="Self.tblorderdetail" />
+    <EntitySet Name="tblproducts" EntityType="Self.tblproduct" />
+    <EntitySet Name="tblstates" EntityType="Self.tblstate" />
+    <EntitySet Name="tblUsers" EntityType="Self.tblUser" />
+    <AssociationSet Name="FK_tblcart_productid" Association="Self.FK_tblcart_productid">
+      <End Role="tblproduct" EntitySet="tblproducts" />
+      <End Role="tblcart" EntitySet="tblcarts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblcart_userid" Association="Self.FK_tblcart_userid">
+      <End Role="tblUser" EntitySet="tblUsers" />
+      <End Role="tblcart" EntitySet="tblcarts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblcity__state_i__3B75D760" Association="Self.FK__tblcity__state_i__3B75D760">
+      <End Role="tblstate" EntitySet="tblstates" />
+      <End Role="tblcity" EntitySet="tblcities" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblUser__city_id__3F466844" Association="Self.FK__tblUser__city_id__3F466844">
+      <End Role="tblcity" EntitySet="tblcities" />
+      <End Role="tblUser" EntitySet="tblUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblorder_user_id" Association="Self.FK_tblorder_user_id">
+      <End Role="tblUser" EntitySet="tblUsers" />
+      <End Role="tblorder" EntitySet="tblorders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblorderdetails_order_id" Association="Self.FK_tblorderdetails_order_id">
+      <End Role="tblorder" EntitySet="tblorders" />
+      <End Role="tblorderdetails" EntitySet="tblorderdetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblorderdetails_product_id" Association="Self.FK_tblorderdetails_product_id">
+      <End Role="tblproduct" EntitySet="tblproducts" />
+      <End Role="tblorderdetails" EntitySet="tblorderdetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblUser__state_i__3E52440B" Association="Self.FK__tblUser__state_i__3E52440B">
+      <End Role="tblstate" EntitySet="tblstates" />
+      <End Role="tblUser" EntitySet="tblUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblUser_tblUser" Association="Self.FK_tblUser_tblUser">
+      <End Role="tblUser" EntitySet="tblUsers" />
+      <End Role="tblUser1" EntitySet="tblUsers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

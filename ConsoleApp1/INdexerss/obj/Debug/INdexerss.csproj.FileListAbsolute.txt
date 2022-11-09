@@ -1,0 +1,6 @@
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\INdexerss\bin\Debug\INdexerss.exe.config
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\INdexerss\bin\Debug\INdexerss.exe
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\INdexerss\bin\Debug\INdexerss.pdb
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\INdexerss\obj\Debug\INdexerss.csproj.CoreCompileInputs.cache
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\INdexerss\obj\Debug\INdexerss.exe
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\INdexerss\obj\Debug\INdexerss.pdb

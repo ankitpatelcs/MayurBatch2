@@ -1,0 +1,7 @@
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\Genericsss\bin\Debug\Genericsss.exe.config
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\Genericsss\bin\Debug\Genericsss.exe
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\Genericsss\bin\Debug\Genericsss.pdb
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\Genericsss\obj\Debug\Genericsss.csproj.AssemblyReference.cache
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\Genericsss\obj\Debug\Genericsss.csproj.CoreCompileInputs.cache
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\Genericsss\obj\Debug\Genericsss.exe
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\Genericsss\obj\Debug\Genericsss.pdb

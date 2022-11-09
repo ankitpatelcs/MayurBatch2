@@ -1,0 +1,7 @@
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\FileIO\bin\Debug\FileIO.exe.config
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\FileIO\bin\Debug\FileIO.exe
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\FileIO\bin\Debug\FileIO.pdb
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\FileIO\obj\Debug\FileIO.csproj.AssemblyReference.cache
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\FileIO\obj\Debug\FileIO.csproj.CoreCompileInputs.cache
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\FileIO\obj\Debug\FileIO.exe
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\FileIO\obj\Debug\FileIO.pdb

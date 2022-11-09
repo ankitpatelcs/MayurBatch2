@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="831f5e27d6ff4a7daf45291479b74e1b" Name="Diagram1">
+        <EntityTypeShape EntityType="ecommerceModel.tblAdmin" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ecommerceModel.tblcart" Width="1.5" PointX="7.5" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ecommerceModel.tblcity" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ecommerceModel.tblorder" Width="1.5" PointX="7.5" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ecommerceModel.tblorderdetail" Width="1.5" PointX="9.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ecommerceModel.tblproduct" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="ecommerceModel.tblstate" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ecommerceModel.tblUser" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="ecommerceModel.FK_tblcart_productid" ManuallyRouted="false" />
+        <AssociationConnector Association="ecommerceModel.FK_tblcart_userid" ManuallyRouted="false" />
+        <AssociationConnector Association="ecommerceModel.FK__tblcity__state_i__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="ecommerceModel.FK__tblUser__city_id__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="ecommerceModel.FK_tblorder_user_id" ManuallyRouted="false" />
+        <AssociationConnector Association="ecommerceModel.FK_tblorderdetails_order_id" ManuallyRouted="false" />
+        <AssociationConnector Association="ecommerceModel.FK_tblorderdetails_product_id" ManuallyRouted="false" />
+        <AssociationConnector Association="ecommerceModel.FK__tblUser__state_i__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="ecommerceModel.FK_tblUser_tblUser" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

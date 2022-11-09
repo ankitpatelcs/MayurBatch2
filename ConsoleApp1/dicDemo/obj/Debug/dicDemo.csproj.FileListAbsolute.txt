@@ -1,0 +1,7 @@
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\dicDemo\bin\Debug\dicDemo.exe.config
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\dicDemo\bin\Debug\dicDemo.exe
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\dicDemo\bin\Debug\dicDemo.pdb
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\dicDemo\obj\Debug\dicDemo.csproj.AssemblyReference.cache
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\dicDemo\obj\Debug\dicDemo.csproj.CoreCompileInputs.cache
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\dicDemo\obj\Debug\dicDemo.exe
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\dicDemo\obj\Debug\dicDemo.pdb

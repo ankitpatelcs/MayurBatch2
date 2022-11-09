@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ProjectDemo.EDM.tblproduct>
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Areas/Users/Views/Shared/Users_LayoutPage.cshtml";
+}
+
+<!--- products --->
+<div class="products">
+    <div class="container">
+        <div class="col-md-12 products-right">
+            <div class="agile_top_brands_grids">
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-3 top_brand_left" style="margin-bottom:50px">
+                        <div class="hover14 column">
+                            <div class="agile_top_brand_left_grid">
+                                <div class="agile_top_brand_left_grid_pos">
+
+                                </div>
+                                <div class="agile_top_brand_left_grid1">
+                                    <figure>
+                                        <div class="snipcart-item block">
+                                            <div class="snipcart-thumb">
+                                                <a href="/Users/Default/Single/@item.product_id">
+                                                    <img title=" " alt=" " src="~/Images/Products/@item.image1" width="200" height="200">
+                                                </a>
+                                                <p>@item.product_name</p>
+                                                <h4>₹ @(item.cost-(item.cost*item.discount/100)) <span>₹ @item.cost</span></h4>
+                                            </div>
+                                            <div class="snipcart-details top_brand_home_details">
+                                                <form action="#" method="post">
+                                                    <fieldset>
+                                                        <input type="hidden" name="cmd" value="_cart">
+                                                        <input type="hidden" name="add" value="1">
+                                                        <input type="hidden" name="business" value=" ">
+                                                        <input type="hidden" name="item_name"
+                                                               value="Fortune Sunflower Oil">
+                                                        <input type="hidden" name="amount" value="35.99">
+                                                        <input type="hidden" name="discount_amount" value="1.00">
+                                                        <input type="hidden" name="currency_code" value="USD">
+                                                        <input type="hidden" name="return" value=" ">
+                                                        <input type="hidden" name="cancel_return" value=" ">
+                                                        <a href="/Users/Default/Single/@item.product_id" class="btn btn-warning">View Details</a>
+
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                <div class="clearfix"> </div>
+            </div>
+
+
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!--- products --->

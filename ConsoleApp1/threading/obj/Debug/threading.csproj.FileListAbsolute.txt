@@ -1,0 +1,7 @@
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\threading\bin\Debug\threading.exe.config
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\threading\bin\Debug\threading.exe
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\threading\bin\Debug\threading.pdb
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\threading\obj\Debug\threading.csproj.AssemblyReference.cache
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\threading\obj\Debug\threading.csproj.CoreCompileInputs.cache
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\threading\obj\Debug\threading.exe
+C:\Ankit Patel\Lectures\MayurBatch\ConsoleApp1\threading\obj\Debug\threading.pdb

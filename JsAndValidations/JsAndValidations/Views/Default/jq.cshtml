@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "jq";
+}
+
+<script>
+    $(document).ready(function () {
+        $("#btn1").click(function () {
+            $("#txt").slideUp();
+        });
+        $("#btn2").click(function () {
+            $("#txt").slideDown();
+        });
+    });
+</script>
+
+<h2>jq</h2>
+
+<input id="btn1" type="button" value="Hide" />
+<input id="btn2" type="button" value="Show" />
+<br />
+<p id="txt" style="width:250px">W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our terms of use, cookie and privacy policy.</p>

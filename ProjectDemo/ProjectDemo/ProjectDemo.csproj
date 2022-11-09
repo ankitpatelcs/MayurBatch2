@@ -1,0 +1,545 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C952D2F-4853-4054-B3DE-2517FE230D75}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectDemo</RootNamespace>
+    <AssemblyName>ProjectDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44371</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\MasterController.cs" />
+    <Compile Include="Areas\Users\Controllers\DefaultController.cs" />
+    <Compile Include="Areas\Users\UsersAreaRegistration.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="EDM\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\tblAdmin.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\tblcart.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\tblcity.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\tblorder.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\tblorderdetail.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\tblproduct.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\tblstate.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM\tblUser.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductStatusEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\web\404.html" />
+    <Content Include="Areas\Admin\web\500.html" />
+    <Content Include="Areas\Admin\web\blank-page.html" />
+    <Content Include="Areas\Admin\web\buttons.html" />
+    <Content Include="Areas\Admin\web\charts.html" />
+    <Content Include="Areas\Admin\web\compose.html" />
+    <Content Include="Areas\Admin\web\css\animate.css" />
+    <Content Include="Areas\Admin\web\css\bootstrap.css" />
+    <Content Include="Areas\Admin\web\css\custom.css" />
+    <Content Include="Areas\Admin\web\css\export.css" />
+    <Content Include="Areas\Admin\web\css\font-awesome.css" />
+    <Content Include="Areas\Admin\web\css\graph.css" />
+    <Content Include="Areas\Admin\web\css\jqcandlestick.css" />
+    <Content Include="Areas\Admin\web\css\monthly.css" />
+    <Content Include="Areas\Admin\web\css\owl.carousel.css" />
+    <Content Include="Areas\Admin\web\css\SidebarNav.min.css" />
+    <Content Include="Areas\Admin\web\css\style.css" />
+    <Content Include="Areas\Admin\web\fonts\fontawesome-webfont.svg" />
+    <Content Include="Areas\Admin\web\forms.html" />
+    <Content Include="Areas\Admin\web\general.html" />
+    <Content Include="Areas\Admin\web\grids.html" />
+    <Content Include="Areas\Admin\web\icons.html" />
+    <Content Include="Areas\Admin\web\images\1.jpg" />
+    <Content Include="Areas\Admin\web\images\2.jpg" />
+    <Content Include="Areas\Admin\web\images\3.jpg" />
+    <Content Include="Areas\Admin\web\images\4.jpg" />
+    <Content Include="Areas\Admin\web\images\a.png" />
+    <Content Include="Areas\Admin\web\images\i1.png" />
+    <Content Include="Areas\Admin\web\images\i2.png" />
+    <Content Include="Areas\Admin\web\images\i3.png" />
+    <Content Include="Areas\Admin\web\images\i4.png" />
+    <Content Include="Areas\Admin\web\images\img-sprite.png" />
+    <Content Include="Areas\Admin\web\images\img1.png" />
+    <Content Include="Areas\Admin\web\images\lock.png" />
+    <Content Include="Areas\Admin\web\images\mail.png" />
+    <Content Include="Areas\Admin\web\images\search-icon.png" />
+    <Content Include="Areas\Admin\web\images\slider1.jpg" />
+    <Content Include="Areas\Admin\web\images\slider2.jpg" />
+    <Content Include="Areas\Admin\web\images\slider3.jpg" />
+    <Content Include="Areas\Admin\web\images\slider4.jpg" />
+    <Content Include="Areas\Admin\web\images\slider5.jpg" />
+    <Content Include="Areas\Admin\web\images\slider6.jpg" />
+    <Content Include="Areas\Admin\web\images\slider7.jpg" />
+    <Content Include="Areas\Admin\web\images\tick.png" />
+    <Content Include="Areas\Admin\web\images\user.png" />
+    <Content Include="Areas\Admin\web\images\weather.jpg" />
+    <Content Include="Areas\Admin\web\inbox.html" />
+    <Content Include="Areas\Admin\web\index.html" />
+    <Content Include="Areas\Admin\web\js\amcharts.js" />
+    <Content Include="Areas\Admin\web\js\bootstrap.js" />
+    <Content Include="Areas\Admin\web\js\Chart.bundle.js" />
+    <Content Include="Areas\Admin\web\js\Chart.js" />
+    <Content Include="Areas\Admin\web\js\Chart.min.js" />
+    <Content Include="Areas\Admin\web\js\chartinator.js" />
+    <Content Include="Areas\Admin\web\js\classie.js" />
+    <Content Include="Areas\Admin\web\js\custom.js" />
+    <Content Include="Areas\Admin\web\js\export.min.js" />
+    <Content Include="Areas\Admin\web\js\images\dragIconRoundBig.svg" />
+    <Content Include="Areas\Admin\web\js\images\lens.svg" />
+    <Content Include="Areas\Admin\web\js\index.js" />
+    <Content Include="Areas\Admin\web\js\index1.js" />
+    <Content Include="Areas\Admin\web\js\index2.js" />
+    <Content Include="Areas\Admin\web\js\jquery-1.11.1.min.js" />
+    <Content Include="Areas\Admin\web\js\jquery.flot.js" />
+    <Content Include="Areas\Admin\web\js\jquery.jqcandlestick.min.js" />
+    <Content Include="Areas\Admin\web\js\jquery.nicescroll.js" />
+    <Content Include="Areas\Admin\web\js\light.js" />
+    <Content Include="Areas\Admin\web\js\metisMenu.min.js" />
+    <Content Include="Areas\Admin\web\js\modernizr.custom.js" />
+    <Content Include="Areas\Admin\web\js\monthly.js" />
+    <Content Include="Areas\Admin\web\js\owl.carousel.js" />
+    <Content Include="Areas\Admin\web\js\pie-chart.js" />
+    <Content Include="Areas\Admin\web\js\scripts.js" />
+    <Content Include="Areas\Admin\web\js\serial.js" />
+    <Content Include="Areas\Admin\web\js\SidebarNav.min.js" />
+    <Content Include="Areas\Admin\web\js\SimpleChart.js" />
+    <Content Include="Areas\Admin\web\js\utils.js" />
+    <Content Include="Areas\Admin\web\js\validator.min.js" />
+    <Content Include="Areas\Admin\web\login.html" />
+    <Content Include="Areas\Admin\web\media.html" />
+    <Content Include="Areas\Admin\web\signup.html" />
+    <Content Include="Areas\Admin\web\tables.html" />
+    <Content Include="Areas\Admin\web\typography.html" />
+    <Content Include="Areas\Admin\web\validation.html" />
+    <Content Include="Areas\Admin\web\w3layouts-License.txt" />
+    <Content Include="Areas\Admin\web\widgets.html" />
+    <Content Include="Areas\Users\web\about.html" />
+    <Content Include="Areas\Users\web\beverages.html" />
+    <Content Include="Areas\Users\web\checkout.html" />
+    <Content Include="Areas\Users\web\contact.html" />
+    <Content Include="Areas\Users\web\css\bootstrap.css" />
+    <Content Include="Areas\Users\web\css\font-awesome.css" />
+    <Content Include="Areas\Users\web\css\skdslider.css" />
+    <Content Include="Areas\Users\web\css\style.css" />
+    <Content Include="Areas\Users\web\faq.html" />
+    <Content Include="Areas\Users\web\gourmet.html" />
+    <Content Include="Areas\Users\web\groceries.html" />
+    <Content Include="Areas\Users\web\household.html" />
+    <Content Include="Areas\Users\web\images\1.png" />
+    <Content Include="Areas\Users\web\images\10.png" />
+    <Content Include="Areas\Users\web\images\11.jpg" />
+    <Content Include="Areas\Users\web\images\111.jpg" />
+    <Content Include="Areas\Users\web\images\12.png" />
+    <Content Include="Areas\Users\web\images\13.png" />
+    <Content Include="Areas\Users\web\images\14.png" />
+    <Content Include="Areas\Users\web\images\15.png" />
+    <Content Include="Areas\Users\web\images\16.png" />
+    <Content Include="Areas\Users\web\images\17.png" />
+    <Content Include="Areas\Users\web\images\2.png" />
+    <Content Include="Areas\Users\web\images\22.jpg" />
+    <Content Include="Areas\Users\web\images\3.png" />
+    <Content Include="Areas\Users\web\images\4.png" />
+    <Content Include="Areas\Users\web\images\44.jpg" />
+    <Content Include="Areas\Users\web\images\5.png" />
+    <Content Include="Areas\Users\web\images\6.png" />
+    <Content Include="Areas\Users\web\images\7.png" />
+    <Content Include="Areas\Users\web\images\8.png" />
+    <Content Include="Areas\Users\web\images\9.png" />
+    <Content Include="Areas\Users\web\images\arrow.png" />
+    <Content Include="Areas\Users\web\images\b1.jpg" />
+    <Content Include="Areas\Users\web\images\b3.jpg" />
+    <Content Include="Areas\Users\web\images\bv1.png" />
+    <Content Include="Areas\Users\web\images\bv2.png" />
+    <Content Include="Areas\Users\web\images\bv3.png" />
+    <Content Include="Areas\Users\web\images\bv4.png" />
+    <Content Include="Areas\Users\web\images\bv5.png" />
+    <Content Include="Areas\Users\web\images\bv6.png" />
+    <Content Include="Areas\Users\web\images\bv7.png" />
+    <Content Include="Areas\Users\web\images\bv8.jpg" />
+    <Content Include="Areas\Users\web\images\bv8.png" />
+    <Content Include="Areas\Users\web\images\bv9.png" />
+    <Content Include="Areas\Users\web\images\card.png" />
+    <Content Include="Areas\Users\web\images\check.png" />
+    <Content Include="Areas\Users\web\images\close_1.png" />
+    <Content Include="Areas\Users\web\images\gu1.png" />
+    <Content Include="Areas\Users\web\images\gu2.png" />
+    <Content Include="Areas\Users\web\images\gu3.png" />
+    <Content Include="Areas\Users\web\images\gu4.png" />
+    <Content Include="Areas\Users\web\images\gu5.png" />
+    <Content Include="Areas\Users\web\images\gu6.png" />
+    <Content Include="Areas\Users\web\images\gu7.png" />
+    <Content Include="Areas\Users\web\images\gu8.png" />
+    <Content Include="Areas\Users\web\images\gu9.png" />
+    <Content Include="Areas\Users\web\images\hh1.png" />
+    <Content Include="Areas\Users\web\images\hh2.png" />
+    <Content Include="Areas\Users\web\images\hh3.png" />
+    <Content Include="Areas\Users\web\images\hh4.png" />
+    <Content Include="Areas\Users\web\images\hh5.png" />
+    <Content Include="Areas\Users\web\images\hh6.png" />
+    <Content Include="Areas\Users\web\images\hh7.png" />
+    <Content Include="Areas\Users\web\images\hh8.png" />
+    <Content Include="Areas\Users\web\images\hh9.png" />
+    <Content Include="Areas\Users\web\images\icon1.png" />
+    <Content Include="Areas\Users\web\images\icon2.png" />
+    <Content Include="Areas\Users\web\images\offer.png" />
+    <Content Include="Areas\Users\web\images\p2.jpg" />
+    <Content Include="Areas\Users\web\images\p3.jpg" />
+    <Content Include="Areas\Users\web\images\p4.jpg" />
+    <Content Include="Areas\Users\web\images\pc1.png" />
+    <Content Include="Areas\Users\web\images\pc2.png" />
+    <Content Include="Areas\Users\web\images\pc3.png" />
+    <Content Include="Areas\Users\web\images\pc4.png" />
+    <Content Include="Areas\Users\web\images\pc5.png" />
+    <Content Include="Areas\Users\web\images\pc6.png" />
+    <Content Include="Areas\Users\web\images\pc7.png" />
+    <Content Include="Areas\Users\web\images\pc8.png" />
+    <Content Include="Areas\Users\web\images\pc9.jpg" />
+    <Content Include="Areas\Users\web\images\pf1.png" />
+    <Content Include="Areas\Users\web\images\pf2.png" />
+    <Content Include="Areas\Users\web\images\pf3.png" />
+    <Content Include="Areas\Users\web\images\pf4.png" />
+    <Content Include="Areas\Users\web\images\pf5.png" />
+    <Content Include="Areas\Users\web\images\pf6.png" />
+    <Content Include="Areas\Users\web\images\pf7.png" />
+    <Content Include="Areas\Users\web\images\pf8.png" />
+    <Content Include="Areas\Users\web\images\pf9.png" />
+    <Content Include="Areas\Users\web\images\si1.jpg" />
+    <Content Include="Areas\Users\web\images\star.png" />
+    <Content Include="Areas\Users\web\images\star1.png" />
+    <Content Include="Areas\Users\web\images\t1.jpg" />
+    <Content Include="Areas\Users\web\images\t2.jpg" />
+    <Content Include="Areas\Users\web\images\t3.jpg" />
+    <Content Include="Areas\Users\web\images\t4.jpg" />
+    <Content Include="Areas\Users\web\images\tick.png" />
+    <Content Include="Areas\Users\web\index.html" />
+    <Content Include="Areas\Users\web\js\bootstrap.min.js" />
+    <Content Include="Areas\Users\web\js\easing.js" />
+    <Content Include="Areas\Users\web\js\jquery-1.11.1.min.js" />
+    <Content Include="Areas\Users\web\js\minicart.min.js" />
+    <Content Include="Areas\Users\web\js\move-top.js" />
+    <Content Include="Areas\Users\web\js\responsiveslides.min.js" />
+    <Content Include="Areas\Users\web\js\skdslider.min.js" />
+    <Content Include="Areas\Users\web\login.html" />
+    <Content Include="Areas\Users\web\offers.html" />
+    <Content Include="Areas\Users\web\packagedfoods.html" />
+    <Content Include="Areas\Users\web\personalcare.html" />
+    <Content Include="Areas\Users\web\products.html" />
+    <Content Include="Areas\Users\web\registered.html" />
+    <Content Include="Areas\Users\web\short-codes.html" />
+    <Content Include="Areas\Users\web\single.html" />
+    <Content Include="Areas\Users\web\w3layouts-License.txt" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="EDM\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="EDM\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Images\Products\a53.jpg" />
+    <Content Include="Images\Products\ipad_air.jpg" />
+    <Content Include="Images\Products\iPhone12.jfif" />
+    <Content Include="Images\Products\iPhone_blue.jfif" />
+    <Content Include="Images\Products\laptop.jpg" />
+    <Content Include="Images\Products\macbookpro.jpg" />
+    <Content Include="Images\Products\nord_CE_2.jpg" />
+    <Content Include="Images\Products\oneplus9.jpg" />
+    <Content Include="Images\Products\Oppo_Reno_6_pro.jpg" />
+    <Content Include="Images\Products\pavillion15.jpg" />
+    <Content Include="Images\Products\s21.jpg" />
+    <Content Include="Images\Products\tab_a7.png" />
+    <Content Include="Images\Products\xps13.jpg" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="EDM\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="EDM\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\web\fonts\fontawesome-webfont.eot" />
+    <Content Include="Areas\Admin\web\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Areas\Admin\web\fonts\fontawesome-webfont.woff" />
+    <Content Include="Areas\Admin\web\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Areas\Admin\web\fonts\FontAwesome.otf" />
+    <Content Include="Areas\Admin\web\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Areas\Admin\web\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Areas\Admin\web\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Areas\Admin\web\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Areas\Admin\Views\Shared\Admin_LayoutPage.cshtml" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Master\Dashboard.cshtml" />
+    <Content Include="Areas\Admin\Views\Master\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\Master\AddProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\Master\ManageProducts.cshtml" />
+    <Content Include="Areas\Users\Views\web.config" />
+    <Content Include="Areas\Users\web\fonts\fontawesome-webfont.eot" />
+    <Content Include="Areas\Users\web\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Areas\Users\web\fonts\fontawesome-webfont.woff" />
+    <Content Include="Areas\Users\web\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Areas\Users\web\fonts\FontAwesome.otf" />
+    <Content Include="Areas\Users\web\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Areas\Users\web\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Areas\Users\web\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Areas\Users\web\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Areas\Users\Views\Shared\Users_LayoutPage.cshtml" />
+    <Content Include="Areas\Users\Views\Default\HomePage.cshtml" />
+    <Content Include="Areas\Users\Views\Default\Login.cshtml" />
+    <Content Include="Areas\Users\Views\Default\Register.cshtml" />
+    <Content Include="Areas\Users\Views\Default\Products.cshtml" />
+    <Content Include="Areas\Users\Views\Default\Single.cshtml" />
+    <Content Include="Areas\Users\Views\Default\Cart.cshtml" />
+    <Content Include="Areas\Users\Views\Default\Success.cshtml" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Users\Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49229</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44371/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
