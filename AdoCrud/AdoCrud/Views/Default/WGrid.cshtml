@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "WGrid";
+    var grid = new WebGridMvc.WebGrid<EDMCrud.EDM.tblemployee>(Model);
+}
+
+<h2>WGrid</h2>
+
+@grid.GetHtml(tableStyle: "table", columns: new []{
+    grid.Column("emp_id","Employee Id"),
+    grid.Column("f_name", "First name"),
+    grid.Column("salary", "salary"),
+    grid.Column("mobile", "mobile"),
+    grid.Column("email", "email"),
+    grid.Column("password", "password"),
+    grid.Column("address", "address"),
+    grid.Column("gender", "gender")
+})
