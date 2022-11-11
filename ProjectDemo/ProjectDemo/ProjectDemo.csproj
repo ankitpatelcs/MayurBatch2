@@ -455,6 +455,7 @@
     <Content Include="Areas\Users\Views\Default\Single.cshtml" />
     <Content Include="Areas\Users\Views\Default\Cart.cshtml" />
     <Content Include="Areas\Users\Views\Default\Success.cshtml" />
+    <Content Include="Areas\Users\Views\Default\Contact.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

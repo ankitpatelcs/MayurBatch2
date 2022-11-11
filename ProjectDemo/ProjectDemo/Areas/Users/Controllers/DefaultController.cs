@@ -104,5 +104,9 @@ namespace ProjectDemo.Areas.Users.Controllers
         {
             return View();
         }
+        public ActionResult Contact()
+        {
+            return View();
+        }
     }
 }
